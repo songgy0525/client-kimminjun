@@ -538,7 +538,7 @@ a {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: center 70%;
     }
 
     /* 모바일 WORK 서브메뉴 - 기본 숨김 */
