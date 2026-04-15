@@ -35,9 +35,29 @@
 
     overlay.addEventListener('click', closeMenu);
 
-    sidebar.querySelectorAll('a').forEach(a => {
+    // 서브메뉴 링크(작품 목록)만 클릭 시 메뉴 닫기
+    sidebar.querySelectorAll('.sub-nav a').forEach(a => {
         a.addEventListener('click', closeMenu);
     });
+
+    // WORK 링크 클릭 시 모바일에서 서브메뉴 토글 (페이지 이동 막기)
+    const workLink = sidebar.querySelector('nav > ul > li > a[href="work_taean.html"]');
+    const subNav = sidebar.querySelector('.sub-nav');
+
+    if (workLink && subNav) {
+        workLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                subNav.classList.toggle('open');
+            }
+        });
+    }
+
+    // work 페이지에 있을 때 서브메뉴 자동으로 열어두기
+    if (window.innerWidth <= 768 && subNav) {
+        const isWorkPage = document.querySelector('.sub-nav .active');
+        if (isWorkPage) subNav.classList.add('open');
+    }
 })();
 
 // 슬라이더 터치 스와이프 (work 페이지)
@@ -60,10 +80,8 @@
         if (Math.abs(diff) < SWIPE_THRESHOLD) return;
 
         if (diff > 0) {
-            // 왼쪽으로 스와이프 → 다음
             document.getElementById('nextBtn')?.click();
         } else {
-            // 오른쪽으로 스와이프 → 이전
             document.getElementById('prevBtn')?.click();
         }
     }, { passive: true });

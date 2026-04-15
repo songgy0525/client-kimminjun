@@ -527,17 +527,27 @@ a {
     #home-wrap {
         height: calc(100vh - 52px);
         justify-content: center;
+        align-items: center;
     }
 
     .home-photo {
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     .home-photo img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* 모바일 WORK 서브메뉴 - 기본 숨김 */
+    #sidebar .sub-nav {
+        display: none;
+    }
+
+    #sidebar .sub-nav.open {
+        display: block;
     }
 
     /* work 슬라이더 */
