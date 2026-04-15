@@ -527,18 +527,19 @@ a {
     #home-wrap {
         height: calc(100vh - 52px);
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .home-photo {
         width: 100%;
-        height: auto;
+        height: 75vw;
     }
 
     .home-photo img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     /* 모바일 WORK 서브메뉴 - 기본 숨김 */
