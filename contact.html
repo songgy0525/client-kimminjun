@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIM MINJUN — CONTACT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+    <aside id="sidebar">
+        <div class="site-name">
+            <h1><a href="index.html">KIM MINJUN</a></h1>
+            <p>김 민 준</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="work_taean.html">WORK</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="https://www.instagram.com/min__dung/" target="_blank">instagram</a>
+            <br><br>
+            &copy;kimminjun
+        </div>
+    </aside>
+
+    <main id="main">
+        <div id="contact-inner">
+            <div class="contact-email-block">
+                <p class="label">CONTACT</p>
+                <a href="mailto:juny1033@gmail.com">juny1033@gmail.com</a>
+            </div>
+
+            <form id="contact-form" action="mailto:juny1033@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label>NAME</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>EMAIL</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>SUBJECT</label>
+                    <input type="text" name="subject">
+                </div>
+                <div class="form-group">
+                    <label>MESSAGE</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">SEND</button>
+            </form>
+        </div>
+    </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

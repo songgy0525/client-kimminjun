@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* ========== RESET ========== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+a {
+        display: block;
+        text-decoration: none;
+    }
+ul {
+        list-style: none;
+    } 
+
+
+/* ========== LAYOUT ========== */
+
+#warp {
+    width:100%;
+    max-width:1920px;
+    min-width:1024px;
+    margin:auto;
+    overflow:hidden;
+}
+header {
+    height: 152px;
+    text-align: center;
+    align-items: center;
+    margin: 24px 24px;
+    /* background: pink; */
+}
+#container {
+    width: 100%;
+    /* background: gold; */
+}
+footer {
+    width: 100%;
+    height: 70px;
+    /* background: aqua; */
+}
+
+
+/* ========== HEADER ========== */
+
+header p {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    font-size: 14px;
+}
+header a {
+    color: #000;
+}
+header li a:hover {
+    text-decoration: underline;
+}
+header li a:active {
+    color:orangered;
+    opacity: 50%;
+}
+header ul {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #dcdcdc;
+    /* border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc; */
+    /* background: red; */
+}
+header ul li {
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* ========== CONTAINER ========== */
+
+.gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    /* background: yellow; */
+    text-align: center;
+    background: url(../img/home_motion.png) no-repeat;
+    background-size: cover;
+    animation:gif 1.5s infinite steps(7) alternate;
+}
+@keyframes gif{
+    100%{
+        background-position: -4200px 0px;
+    }
+}
+
+
+/* ========== FOOTER ========== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 14px;
+}
+footer ul {
+    display: flex;
+}
+footer li {
+    width:20px;
+    height:20px;
+    margin-left:6px;
+    text-indent:-9999px;
+    overflow:hidden;
+}
+footer li.instagram {
+    background:url(../img/logo/logo-instagram.svg) no-repeat;
+    background-size:contain;
+}
