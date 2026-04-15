@@ -526,9 +526,7 @@ a {
     /* 홈 이미지 모바일 */
     #home-wrap {
         height: calc(100vh - 52px);
-        background: #000;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
     }
 
     .home-photo {
@@ -539,7 +537,6 @@ a {
     .home-photo img {
         width: 100%;
         height: auto;
-        object-fit: contain;
     }
 
     /* 모바일 WORK 서브메뉴 - 기본 숨김 */
